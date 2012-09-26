@@ -74,15 +74,16 @@ function land_use_authorization_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_landuseauthorization';
   $strongarm->value = array(
-    'title' => '30',
-    'revision_information' => '60',
-    'author' => '59',
-    'options' => '61',
-    'comment_settings' => '57',
-    'menu' => '62',
-    'path' => '63',
-    'attachments' => '58',
-    'print' => '64',
+    'print' => '49',
+    'title' => '11',
+    'revision_information' => '45',
+    'author' => '44',
+    'options' => '46',
+    'comment_settings' => '42',
+    'menu' => '47',
+    'path' => '48',
+    'attachments' => '43',
+    'workflow' => '10',
   );
   $export['content_extra_weights_landuseauthorization'] = $strongarm;
 
