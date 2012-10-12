@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_strongarm().
  */
-function land_use_authorization_strongarm() {
+function tkc_lua_strongarm() {
   $export = array();
 
   $strongarm = new stdClass;
@@ -74,16 +74,15 @@ function land_use_authorization_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_landuseauthorization';
   $strongarm->value = array(
-    'print' => '49',
     'title' => '11',
-    'revision_information' => '45',
-    'author' => '44',
-    'options' => '46',
-    'comment_settings' => '42',
-    'menu' => '47',
-    'path' => '48',
-    'attachments' => '43',
-    'workflow' => '10',
+    'revision_information' => '49',
+    'author' => '48',
+    'options' => '50',
+    'comment_settings' => '46',
+    'menu' => '51',
+    'path' => '52',
+    'attachments' => '47',
+    'print' => '53',
   );
   $export['content_extra_weights_landuseauthorization'] = $strongarm;
 

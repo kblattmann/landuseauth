@@ -1,0 +1,3 @@
+<?php
+
+include_once('tkc_lua.features.inc');

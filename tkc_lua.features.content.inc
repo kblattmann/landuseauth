@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_content_default_fields().
  */
-function land_use_authorization_content_default_fields() {
+function tkc_lua_content_default_fields() {
   $fields = array();
 
   // Exported field: field_easement_extents
@@ -413,6 +413,7 @@ return array(
     'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => 'Active
+Suspended
 Closed',
     'allowed_values_php' => '',
     'widget' => array(
@@ -505,6 +506,72 @@ Closed',
       'description' => '',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
+    ),
+  );
+
+  // Exported field: field_lua_condition
+  $fields['landuseauthorization-field_lua_condition'] = array(
+    'field_name' => 'field_lua_condition',
+    'type_name' => 'landuseauthorization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => '3',
+      'size' => 60,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_lua_condition][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Condition',
+      'weight' => '43',
+      'description' => 'Terms and conditions of the authorization.',
+      'type' => 'text_textarea',
+      'module' => 'text',
     ),
   );
 
@@ -2035,6 +2102,220 @@ Closed',
     ),
   );
 
+  // Exported field: field_lua_suspended
+  $fields['landuseauthorization-field_lua_suspended'] = array(
+    'field_name' => 'field_lua_suspended',
+    'type_name' => 'landuseauthorization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => '5',
+      'size' => 60,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_lua_suspended][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Suspended Right',
+      'weight' => '45',
+      'description' => 'A right of the authorization holder suspended but the Land Steward.',
+      'type' => 'text_textarea',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_lua_suspendedend
+  $fields['landuseauthorization-field_lua_suspendedend'] = array(
+    'field_name' => 'field_lua_suspendedend',
+    'type_name' => 'landuseauthorization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'date',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'date',
+    'active' => '1',
+    'granularity' => array(
+      'year' => 'year',
+      'month' => 'month',
+      'day' => 'day',
+    ),
+    'timezone_db' => '',
+    'tz_handling' => 'none',
+    'todate' => '',
+    'repeat' => 0,
+    'repeat_collapsed' => '',
+    'default_format' => '3pikas',
+    'widget' => array(
+      'default_value' => 'blank',
+      'default_value_code' => '',
+      'default_value2' => 'blank',
+      'default_value_code2' => '',
+      'input_format' => 'Y-m-d',
+      'input_format_custom' => '',
+      'increment' => '1',
+      'text_parts' => array(),
+      'year_range' => '-3:+3',
+      'label_position' => 'above',
+      'label' => 'Date Suspension End',
+      'weight' => '47',
+      'description' => 'The date the right was unsuspended.',
+      'type' => 'date_popup',
+      'module' => 'date',
+    ),
+  );
+
+  // Exported field: field_lua_suspendedstart
+  $fields['landuseauthorization-field_lua_suspendedstart'] = array(
+    'field_name' => 'field_lua_suspendedstart',
+    'type_name' => 'landuseauthorization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'date',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'date',
+    'active' => '1',
+    'granularity' => array(
+      'year' => 'year',
+      'month' => 'month',
+      'day' => 'day',
+    ),
+    'timezone_db' => '',
+    'tz_handling' => 'none',
+    'todate' => '',
+    'repeat' => 0,
+    'repeat_collapsed' => '',
+    'default_format' => '3pikas',
+    'widget' => array(
+      'default_value' => 'blank',
+      'default_value_code' => '',
+      'default_value2' => 'blank',
+      'default_value_code2' => '',
+      'input_format' => 'Y-m-d',
+      'input_format_custom' => '',
+      'increment' => '1',
+      'text_parts' => array(),
+      'year_range' => '-3:+3',
+      'label_position' => 'above',
+      'label' => 'Date Suspension Start',
+      'weight' => '46',
+      'description' => 'The date the right was suspended.',
+      'type' => 'date_popup',
+      'module' => 'date',
+    ),
+  );
+
   // Exported field: field_lua_transfer
   $fields['landuseauthorization-field_lua_transfer'] = array(
     'field_name' => 'field_lua_transfer',
@@ -2124,6 +2405,9 @@ Closed',
   t('Authorization Status');
   t('Authorization Type');
   t('Client');
+  t('Condition');
+  t('Date Suspension End');
+  t('Date Suspension Start');
   t('Easement Extents');
   t('End date');
   t('Instrument');
@@ -2134,6 +2418,7 @@ Closed',
   t('Project Description');
   t('Size');
   t('Start Date');
+  t('Suspended Right');
   t('Transfers');
 
   return $fields;
